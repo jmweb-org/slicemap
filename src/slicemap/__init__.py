@@ -4,7 +4,7 @@ from slicemap.analyze import SliceRegression, analyze, overall_scores
 from slicemap.metrics import Metric, get_metric, known_metrics
 from slicemap.slicing import Slice, slices_for
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 __all__ = [
     "Metric",
