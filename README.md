@@ -26,7 +26,8 @@ age       [55, 70)      540   0.901   0.860   -0.041
 ## Install
 
 ```console
-$ pip install slicemap-cli
+$ pip install slicemap-cli                 # from PyPI, once released
+$ pip install git+https://github.com/jmweb-org/slicemap   # latest, available now
 ```
 
 Reads one CSV, Parquet or JSON Lines file containing the truth column, both
