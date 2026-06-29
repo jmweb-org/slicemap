@@ -41,6 +41,45 @@ $ slicemap compare preds.csv --true y --old a --new b --check
 If `--features` is omitted, every column except the truth and prediction columns
 is treated as a feature.
 
+### JSON output schema
+
+`--json` writes a single object to stdout:
+
+```json
+{
+  "metric": "accuracy",
+  "old_overall": 0.910,
+  "new_overall": 0.918,
+  "regressions": [
+    {
+      "feature": "country",
+      "slice": "BR",
+      "size": 842,
+      "old_score": 0.904,
+      "new_score": 0.731,
+      "regression": 0.173,
+      "impact": 145.766
+    }
+  ]
+}
+```
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `metric` | string | Metric name used for scoring (e.g. `"accuracy"`) |
+| `old_overall` | number | Overall metric score for the old model |
+| `new_overall` | number | Overall metric score for the new model |
+| `regressions` | array | Slices where the new model is worse, sorted by `impact` descending |
+| `regressions[].feature` | string | Column name the slice is drawn from |
+| `regressions[].slice` | string | Slice label (a category value or a quantile bin like `"[55, 70)"`) |
+| `regressions[].size` | integer | Number of rows in the slice |
+| `regressions[].old_score` | number | Old model's metric score on this slice |
+| `regressions[].new_score` | number | New model's metric score on this slice |
+| `regressions[].regression` | number | Absolute degradation (always positive) |
+| `regressions[].impact` | number | `regression × size` — used for ranking |
+
+All numeric values are rounded to six decimal places.
+
 ### In CI
 
 Fail a model update when any slice regresses:
