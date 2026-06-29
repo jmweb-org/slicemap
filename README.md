@@ -1,5 +1,10 @@
 # slicemap
 
+[![CI](https://github.com/jmweb-org/slicemap/actions/workflows/ci.yml/badge.svg)](https://github.com/jmweb-org/slicemap/actions/workflows/ci.yml)
+[![PyPI](https://img.shields.io/pypi/v/slicemap.svg)](https://pypi.org/project/slicemap/)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 Find the data slices where a new model regressed against an old one. Headless,
 file in, table out.
 
