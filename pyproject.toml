@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "slicemap"
+name = "slicemap-cli"
 version = "0.2.0"
 description = "Find the data slices where a new model regressed against an old one."
 readme = "README.md"

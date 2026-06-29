@@ -1,7 +1,7 @@
 # slicemap
 
 [![CI](https://github.com/jmweb-org/slicemap/actions/workflows/ci.yml/badge.svg)](https://github.com/jmweb-org/slicemap/actions/workflows/ci.yml)
-[![PyPI](https://img.shields.io/pypi/v/slicemap.svg)](https://pypi.org/project/slicemap/)
+[![PyPI](https://img.shields.io/pypi/v/slicemap-cli.svg)](https://pypi.org/project/slicemap-cli/)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
@@ -26,7 +26,7 @@ age       [55, 70)      540   0.901   0.860   -0.041
 ## Install
 
 ```console
-$ pip install slicemap
+$ pip install slicemap-cli
 ```
 
 Reads one CSV, Parquet or JSON Lines file containing the truth column, both
